@@ -1,7 +1,7 @@
 public class Main {
     public static void main(String[] args) {
         //System.out.println("hi your code works now you\'re welcome");
-        /*QuadTool bud = new QuadTool();
+        QuadTool bud = new QuadTool(); /*
         bud.testing("x^2+2x+3"); //normal
         bud.testing("-x^2-2x-3"); //negative
         bud.testing("10x^2+20x+30"); //double digit
@@ -14,7 +14,9 @@ public class Main {
         QuadraticSolver bod = new QuadraticSolver();
         System.out.println(bod.answer("x4fueiwdjkf^2+5x+5"));
         System.out.println(bod.answer("x^2+5x+5"));
-        
+        QuadraticDifferentiator bid = new QuadraticDifferentiator();
+        System.out.println(bid.answerDif("4x^2+8"));
+        bud.testing("3x^2+x+2"); 
 
     }    
 }

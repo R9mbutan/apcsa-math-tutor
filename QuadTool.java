@@ -20,9 +20,11 @@ public class QuadTool {
         // sets afterA to the argument without x^2 term
         String afterA = (fn.indexOf("x^2") != -1) ? fn.substring(fn.indexOf("x^2")+3, fn.length()) : fn;
         //for coefB
+//System.out.println("afterA is "+afterA);
+//System.out.println("so coefB is: " +afterA.substring(0, afterA.indexOf("x")));
         //if coefB is there
         if (afterA.indexOf("x") != -1) {
-            if (afterA.substring(0, afterA.indexOf("x")).equals("")) coefB = 1;
+            if (afterA.substring(1, afterA.indexOf("x")).equals("")) coefB = 1;
             else if (afterA.indexOf("x") == -1) coefB = 0;
             else coefB = Integer.parseInt(afterA.substring(0, afterA.indexOf("x")));
         }
