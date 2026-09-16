@@ -59,20 +59,24 @@ System.out.println("huh? " + afterA.substring(1, afterA.indexOf("x")).equals("")
 
 
     //TESTING
-    public String handleInputFn() {
-        Scanner input = new Scanner(System.in);
-        System.out.println("Input your (quadratic) function in format Ax^2+Bx+C: ");
-        String output = input.nextLine();
-        input.close();
-        return output;
-    }
-    public void inputTimes() {
-    Scanner input = new Scanner(System.in);
-    System.out.println("Input your initial time: ");
-    t0 = input.nextDouble();
-    System.out.println("Input your final time: ");
-    tf = input.nextDouble();
-    input.close();
-    }
+
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
