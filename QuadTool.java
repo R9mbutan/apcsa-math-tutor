@@ -1,7 +1,10 @@
+import java.util.Scanner;
 public class QuadTool {
-    public int coefA = 0;
-    public int coefB = 0;
-    public int coefC = 0;
+    public double coefA = 0;
+    public double coefB = 0;
+    public double coefC = 0;
+    public double t0;
+    public double tf;
 
     //updates the coefficients of A, B, and C based on the given argument (NO TRY/CATCH)
     public void parseFunc(String fn){
@@ -10,7 +13,7 @@ public class QuadTool {
         if (fn.indexOf("x^2") != -1) {
             if (fn.substring(0, fn.indexOf("x^2")).equals("")) coefA = 1;
             else if (fn.substring(0, fn.indexOf("x^2")).equals("-")) coefA = -1;
-            else coefA = Integer.parseInt(fn.substring(0, fn.indexOf("x^2")));
+            else coefA = Double.parseDouble(fn.substring(0, fn.indexOf("x^2")));
             //String afterA = fn.substring(fn.indexOf("x^2")+3, fn.length());
         }
         else {
@@ -29,12 +32,12 @@ System.out.println("huh? " + afterA.substring(1, afterA.indexOf("x")).equals("")
             if ((afterA.substring(0, afterA.indexOf("x")).equals("+"))) coefB = 1;
             else if ((afterA.substring(0, afterA.indexOf("x")).equals("-"))) coefB = -1;
             else if (afterA.indexOf("x") == -1) coefB = 0;
-            else coefB = Integer.parseInt(afterA.substring(0, afterA.indexOf("x")));
+            else coefB = Double.parseDouble(afterA.substring(0, afterA.indexOf("x")));
         }
         else coefB = 0;
         //for coefC
         if (afterA.substring(afterA.indexOf("x")+1, afterA.length()).equals("")) coefC = 0;
-        else coefC = Integer.parseInt(afterA.substring(afterA.indexOf("x")+1, afterA.length()));  
+        else coefC = Double.parseDouble(afterA.substring(afterA.indexOf("x")+1, afterA.length()));  
     }
 
     //returns whether an argument is acceptable
@@ -53,4 +56,23 @@ System.out.println("huh? " + afterA.substring(1, afterA.indexOf("x")).equals("")
         }
         else System.out.println("Please input in proper format!");
     }
+
+
+    //TESTING
+    public String handleInputFn() {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Input your (quadratic) function in format Ax^2+Bx+C: ");
+        String output = input.nextLine();
+        input.close();
+        return output;
+    }
+    public void inputTimes() {
+    Scanner input = new Scanner(System.in);
+    System.out.println("Input your initial time: ");
+    t0 = input.nextDouble();
+    System.out.println("Input your final time: ");
+    tf = input.nextDouble();
+    input.close();
+    }
+
 }
