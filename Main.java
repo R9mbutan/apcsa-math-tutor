@@ -12,6 +12,7 @@ public class Main {
         bud.testing("x^2"); //only a - should return 1, 0, 0 N
         bud.testing("2x"); //only b - should return 0, 2, 0 Y */
         QuadraticSolver bod = new QuadraticSolver();
+        System.out.println(bod.answer("x4fueiwdjkf^2+5x+5"));
         System.out.println(bod.answer("x^2+5x+5"));
         
 

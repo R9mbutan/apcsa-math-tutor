@@ -8,9 +8,12 @@ public class QuadraticSolver extends QuadTool{
     }
 
     public String answer(String fn){
-        parseFunc(fn);
-        solve(coefA, coefB, coefC);
-        return "Roots are: " + root1 + " and " + root2;
+        if (isOK(fn)) {
+            parseFunc(fn);
+            solve(coefA, coefB, coefC);
+            return "Roots are: " + root1 + " and " + root2;
+        }
+        else return "Invalid Input!";
     }
     
 }
