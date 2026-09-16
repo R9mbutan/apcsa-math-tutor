@@ -28,5 +28,6 @@ public class Main {
         System.out.println(quinn.answer("x^2+4x+5"));
         System.out.println(quinn.answer("x^2"));
         System.out.println(quinn.answer("x^2+2x+1"));
+        System.out.println(quinn.answer("x^2-5x+6"));
     }    
 }
