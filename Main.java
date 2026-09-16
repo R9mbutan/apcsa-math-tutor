@@ -21,7 +21,8 @@ public class Main {
 
         QuadraticAROCFinder aaron = new QuadraticAROCFinder();
         bud.testing("6x+3");
-        System.out.println(aaron.calculate("6x+3", 0, 4));
+        System.out.println(aaron.answerAROC("6x+3", 0, 4));
+        System.out.println(aaron.answerAROC("bob", 0, 4));
         //System.out.println(aaron.calculate("6x+332ewdrf", 0, 4));
 
         QuadraticSolver quinn = new QuadraticSolver();

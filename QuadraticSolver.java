@@ -11,8 +11,8 @@ public class QuadraticSolver extends QuadTool{
         if (isOK(fn)) {
             parseFunc(fn);
             solve(coefA, coefB, coefC);
-            if (!(Double.isNaN(root1) || Double.isNaN(root2))) return "Roots are: " + root1 + " and " + root2;
-            else if (root1 == root2) return "The root is: " + root1;
+            if (!(Double.isNaN(root1) || Double.isNaN(root2)) && !(Math.abs(root1 - root2) < 0.0001)) return "Roots are: " + root1 + " and " + root2;
+            else if (Math.abs(root1 - root2) < 0.0001) return "The root is: " + root1;
             else return "No roots for that function!";
         }
         else return "Invalid Input!";
