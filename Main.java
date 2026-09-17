@@ -11,7 +11,7 @@ public class Main {
         Scanner interact = new Scanner(System.in);
         System.out.println("Finished.");
 
-
+        /*
         int choice = 0;
         //while ((choice != 999) || ((choice < 5) || (choice > 0))) {
             System.out.println("Which tool would you like to use? \n Options: \n 1. AROC Finder \n 2. Definite Integrator \n 3. Differentiator \n 5. Indefinite Integrator \n 5. Solver \n Input 1, 2, 3, 4, or 5. \n Input 999 to end.");
@@ -43,5 +43,7 @@ public class Main {
                 System.out.println("Please use a valid input!");
             }
        // }
+       */
+      System.out.println(indefIntegrator.integrate("x^2+x+4"));
     }    
 }

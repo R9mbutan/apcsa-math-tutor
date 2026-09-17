@@ -3,7 +3,7 @@ public class QuadraticDifferentiator extends QuadTool {
     public void differentiate(double a, double b, double c) {
         finalDerivitave = 2*a + "x + " + b;
     }
-    public String answerDif(String fn) {
+    public String getDerivative(String fn) {
         if (isOK(fn)) {
             parseFunc(fn);
             differentiate(coefA, coefB, coefC);

@@ -7,7 +7,7 @@ public class QuadraticSolver extends QuadTool{
             root2 = (-b - Math.sqrt(Math.pow(b,2) - 4 * a * c)) / (2*a) ;
     }
 
-    public String answer(String fn){
+    public String getRoots(String fn){
         if (isOK(fn)) {
             parseFunc(fn);
             solve(coefA, coefB, coefC);
