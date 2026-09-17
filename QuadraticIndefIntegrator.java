@@ -16,7 +16,7 @@ public class QuadraticIndefIntegrator extends QuadTool {
                     fin += "+" + coefC + "x";
                 else fin += coefC + "x";
             }
-            return fin;
+            return fin+"+C";
         }
         else return "Invalid input!";
     }

@@ -45,5 +45,10 @@ public class Main {
        // }
        */
       System.out.println(indefIntegrator.integrate("x^2+x+4"));
+      System.out.println(indefIntegrator.integrate("x^2+x+4")); // Should output 0.333x^3+0.5x^2+4x+C
+System.out.println(indefIntegrator.integrate("3x^5-8x^3+2")); // Should output 0.5x^6-2x^4+2x+C
+System.out.println(indefIntegrator.integrate("-x^4+6x")); // Should output -0.2x^5+3x^2+C
+System.out.println(indefIntegrator.integrate("7")); // Should output 7x+C
+System.out.println(indefIntegrator.integrate("x")); // Should output 0.5x^2+C
     }    
 }
