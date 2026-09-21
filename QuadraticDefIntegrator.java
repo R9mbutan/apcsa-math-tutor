@@ -3,14 +3,17 @@ public class QuadraticDefIntegrator extends QuadTool {
         if (isOK(fn)) {
             double sum = 0;
             parseFunc(fn);
+            // adds up (0 to tf)∫f(x)dx
             sum += coefA/3 * Math.pow(tf,3);
             sum += coefB/2 * Math.pow(tf,2);
             sum += coefC * tf;
+            // subtracts (0 to ti)∫f(x)dx
             sum -= coefA/3 * Math.pow(t0,3);
             sum -= coefB/2 * Math.pow(t0,2);
             sum -= coefC * t0;
+            // return total sum
             return sum;
-        }
-        else return -0.006767;
+        } //invalid function returns 0 b/c the function returns doubles only. 
+        else return 0;
     }
 }

@@ -1,4 +1,3 @@
-import java.util.Scanner;
 public class QuadTool {
     public double coefA = 0;
     public double coefB = 0;
@@ -27,14 +26,21 @@ public class QuadTool {
 
         //if coefB is there
         if (afterA.indexOf("x") != -1) {
+            //if the substring is just "+": coefB = 1
             if ((afterA.substring(0, afterA.indexOf("x")).equals("+"))) coefB = 1;
+            //if the substring is just "-": coefB = -1
             else if ((afterA.substring(0, afterA.indexOf("x")).equals("-"))) coefB = -1;
+            //if there is no "x": coefB = 0
             else if (afterA.indexOf("x") == -1) coefB = 0;
+            // otherwise, coefB is just whatever is between the start and x
             else coefB = Double.parseDouble(afterA.substring(0, afterA.indexOf("x")));
         }
+        // no x means coefB DNE
         else coefB = 0;
         //for coefC
+        // if the term after bx is nothing, coefC = 0
         if (afterA.substring(afterA.indexOf("x")+1, afterA.length()).equals("")) coefC = 0;
+        // otherwise, coefC is just the last term
         else coefC = Double.parseDouble(afterA.substring(afterA.indexOf("x")+1, afterA.length()));  
     }
 
@@ -56,10 +62,6 @@ public class QuadTool {
         }
         else System.out.println("Please input in proper format!");
     }
-
-
-    //TESTING
-
 
 }
 
