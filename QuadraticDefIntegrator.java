@@ -1,3 +1,9 @@
+/*
+Class: QuadraticDefIntegrator
+Author: Tran Khanh Phong
+Purpose: To calculate the definite integral of a given function between given times
+Resources: Mr. Otterstetter, Ms. Cannon's Notes, Desmos.com for testing
+*/
 public class QuadraticDefIntegrator extends QuadTool {
     public double defIntegrate(String fn, double t0, double tf) {
         if (isOK(fn)) {
