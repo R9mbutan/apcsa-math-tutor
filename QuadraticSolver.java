@@ -1,5 +1,10 @@
+/*
+Class: QuadraticSolver
+Author: Tran Khanh Phong
+Purpose: To find & return the roots of a given function
+Resources: Mr. Otterstetter, Ms. Cannon's Notes, Desmos.com for testing
+*/
 public class QuadraticSolver extends QuadTool{
-    
     //instantiate roots
     private double root1;
     private double root2;

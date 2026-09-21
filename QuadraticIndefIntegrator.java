@@ -1,3 +1,9 @@
+/*
+Class: QuadraticIndefIntegrator
+Author: Tran Khanh Phong
+Purpose: To find & return the integral of a given function
+Resources: Mr. Otterstetter, Ms. Cannon's Notes, Desmos.com for testing
+*/
 public class QuadraticIndefIntegrator extends QuadTool {
     public String integrate(String fn) {
         if (isOK(fn)) {

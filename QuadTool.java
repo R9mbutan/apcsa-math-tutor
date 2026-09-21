@@ -1,3 +1,9 @@
+/*
+Class: QuadTool
+Author: Tran Khanh Phong
+Purpose: To find & set the coefficients of a given quadratic; the parent class
+Resources: Mr. Vollmer's Coding I curriculum
+*/
 public class QuadTool {
     public double coefA = 0;
     public double coefB = 0;

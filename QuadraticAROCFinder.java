@@ -1,3 +1,9 @@
+/*
+Class: QuadraticAROCFinder
+Author: Tran Khanh Phong
+Purpose: To find & return the average rate of change of a given function between given times
+Resources: Mr. Otterstetter, Ms. Cannon's Notes, Desmos.com for testing
+*/
 public class QuadraticAROCFinder extends QuadTool {
     // compute f(t) given t
     public double doFn(String fn, double t){

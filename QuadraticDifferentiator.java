@@ -1,3 +1,9 @@
+/*
+Class: QuadraticDifferentiator
+Author: Tran Khanh Phong
+Purpose: To find & return the derivative of a given function
+Resources: Mr. Otterstetter, Ms. Cannon's Notes, Desmos.com for testing
+*/
 public class QuadraticDifferentiator extends QuadTool {
     // initialize finalDerivative as String b/c equations are Strings in this program
     private String finalDerivitave = "0";

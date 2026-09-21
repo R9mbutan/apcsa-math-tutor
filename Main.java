@@ -1,3 +1,10 @@
+/*
+Project: Quadratic Math Tutor
+Author: Tran Khanh Phong
+Purpose: To solve various quadratic problems
+Resources: Desmos.com for testing
+*/
+
 import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
