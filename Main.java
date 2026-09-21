@@ -3,6 +3,7 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Welcome to Quadratic Math Tutor");
         System.out.print("Setting up...");
+        QuadTool tool = new QuadTool();
         QuadraticAROCFinder arocFinder = new QuadraticAROCFinder();
         QuadraticDefIntegrator defIntegrator = new QuadraticDefIntegrator();
         QuadraticDifferentiator differentiator = new QuadraticDifferentiator();
@@ -10,45 +11,62 @@ public class Main {
         QuadraticSolver solver = new QuadraticSolver();
         Scanner interact = new Scanner(System.in);
         System.out.println("Finished.");
-
-        /*
+        
         int choice = 0;
-        //while ((choice != 999) || ((choice < 5) || (choice > 0))) {
-            System.out.println("Which tool would you like to use? \n Options: \n 1. AROC Finder \n 2. Definite Integrator \n 3. Differentiator \n 5. Indefinite Integrator \n 5. Solver \n Input 1, 2, 3, 4, or 5. \n Input 999 to end.");
-            try {
+        try {
+            while (choice != 999) {
+                System.out.println("Choose an operation for your quadratic: \n1. Average Rate of Change Finder\n2. Find Definite Integral\n3. Find Indefinite Integral\n4. Find Derivative\n5. Find Roots\n999 to exit");
+                System.out.print("Choice: ");
                 choice = interact.nextInt();
-            interact.close();
-            if (choice == 1)
-                {
-                    System.out.println("placeholder 1");
+                interact.nextLine();
+
+
+                if (choice == 1) {
+                    System.out.println("Function: ");
+                    String func = interact.nextLine();
+                    System.out.print("Initial Time: ");
+                    double ti = interact.nextDouble();
+                    System.out.print("Final Time: ");
+                    double tf = interact.nextDouble();
+
+                    System.out.println("The average rate of change of " + func + " from " + tf + " to " + ti + " is " + arocFinder.answerAROC(func, ti,  tf));
                 }
-            else if (choice == 2)
-                {
-                    System.out.println("placeholder 2");
+                else if (choice == 2) {
+                    System.out.println("Function: ");
+                    String func = interact.nextLine();
+                    System.out.print("Initial Time: ");
+                    double ti = interact.nextDouble();
+                    System.out.print("Final Time: ");
+                    double tf = interact.nextDouble();
+
+                    System.out.println("The integral of " + func + " from " + tf + " to " + ti + " is " + defIntegrator.defIntegrate(func, ti, tf));
                 }
-            else if (choice == 3)
-                {
-                    System.out.println("placeholder 3");
+                else if (choice == 3) {
+                    System.out.println("Function: ");
+                    String func = interact.nextLine();
+                    System.out.println("The indefinite integral of " + func + " is " + indefIntegrator.integrate(func));
                 }
-            else if (choice == 4)
-                {
-                    System.out.println("placeholder 4");
+                else if (choice == 4) {
+                    System.out.println("Function: ");
+                    String func = interact.nextLine();
+                    System.out.println("The derivatave of " + func + " is " + differentiator.getDerivative(func));
                 }
-            else if (choice == 5)
-                {
-                    System.out.println("placeholder 5");
+                else if (choice == 5) {
+                    System.out.println("Function: ");
+                    String func = interact.nextLine();
+                    System.out.println(solver.getRoots(func));
                 }
-                //HAS INFINITE LOOP. FINISH LATER
-            } catch(Exception e) {
-                System.out.println("Please use a valid input!");
+                else if (choice == 999) {
+                    System.out.println("Bye bye!");
+                }
+                else
+                    System.out.println("Please input a choice or exit. ");
             }
-       // }
-       */
-      System.out.println(indefIntegrator.integrate("x^2+x+4"));
-      System.out.println(indefIntegrator.integrate("x^2+x+4")); // Should output 0.333x^3+0.5x^2+4x+C
-System.out.println(indefIntegrator.integrate("3x^5-8x^3+2")); // Should output 0.5x^6-2x^4+2x+C
-System.out.println(indefIntegrator.integrate("-x^4+6x")); // Should output -0.2x^5+3x^2+C
-System.out.println(indefIntegrator.integrate("7")); // Should output 7x+C
-System.out.println(indefIntegrator.integrate("x")); // Should output 0.5x^2+C
+        } catch(Exception e) {System.out.println("What the heckle is that supposed to mean? Aborting program...");}
+
+
+        System.out.println("Exiting...");
+        interact.close();
+        System.out.println("Done.");
     }    
 }

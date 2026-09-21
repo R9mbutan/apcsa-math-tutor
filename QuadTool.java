@@ -1,4 +1,3 @@
-import java.util.Scanner;
 public class QuadTool {
     public double coefA = 0;
     public double coefB = 0;
@@ -7,6 +6,7 @@ public class QuadTool {
     public double tf;
 
     //updates the coefficients of A, B, and C based on the given argument (NO TRY/CATCH)
+    @SuppressWarnings("IndexOfReplaceableByContains")
     public void parseFunc(String fn){
         //for coefA
         //if coefA is there:
@@ -23,13 +23,10 @@ public class QuadTool {
         // sets afterA to the argument without x^2 term
         String afterA = (fn.indexOf("x^2") != -1) ? fn.substring(fn.indexOf("x^2")+3, fn.length()) : fn;
         //for coefB
-/* System.out.println("afterA is "+afterA);
-System.out.println("so coefB is: " +afterA.substring(0, afterA.indexOf("x")));
-System.out.println("huh? " + afterA.substring(1, afterA.indexOf("x")).equals("")); */
 
         //if coefB is there
         if (afterA.indexOf("x") != -1) {
-            if ((afterA.substring(0, afterA.indexOf("x")).equals("+"))) coefB = 1;
+            if ((afterA.substring(0, afterA.indexOf("x")).equals("+")) || afterA.substring(0, afterA.indexOf("x")).equals("")) coefB = 1;
             else if ((afterA.substring(0, afterA.indexOf("x")).equals("-"))) coefB = -1;
             else if (afterA.indexOf("x") == -1) coefB = 0;
             else coefB = Double.parseDouble(afterA.substring(0, afterA.indexOf("x")));
@@ -56,11 +53,6 @@ System.out.println("huh? " + afterA.substring(1, afterA.indexOf("x")).equals("")
         }
         else System.out.println("Please input in proper format!");
     }
-
-
-    //TESTING
-
-
 }
 
 
